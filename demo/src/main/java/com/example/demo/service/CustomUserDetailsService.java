@@ -13,7 +13,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         // Dummy user (replace with DB logic)
         if ("admin".equals(username)) {
-            return new User("admin", "{Bcrypt}"+"password", Collections.emptyList());
+            return new User("admin", "{noop}"+"password", Collections.emptyList());
         }
 
         throw new UsernameNotFoundException("User not found");
